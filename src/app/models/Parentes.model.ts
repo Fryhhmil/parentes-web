@@ -1,19 +1,19 @@
 export enum TipoParente {
-    MAE = 'mãe',
-    PAI = 'pai',
-    TIO = 'tio',
-    TIA = 'tia',
-    AVOH = 'avô',
-    AVOF = 'avó'
+  MAE = 'mãe',
+  PAI = 'pai',
+  TIO = 'tio',
+  TIA = 'tia',
+  AVOH = 'avô',
+  AVOF = 'avó'
 }
 
 export interface ParenteDTO {
-    id: number;
-    nome: string;
-    tipo: TipoParente;
-    foto: ArrayBuffer[];
-    telefones: string[];
-    idsAluno: number[];
+  id: number;
+  nome: string;
+  tipo: TipoParente;
+  foto: ArrayBuffer[];
+  telefones: string[];
+  idsAluno: number[];
 }
 
 export interface Parente {
@@ -21,8 +21,8 @@ export interface Parente {
   nome: string;
   tipo: TipoParente;
   foto: ArrayBuffer[];
-  telefones: string[];
-  idsAluno: Aluno[];
+  telefones: Telefone[];
+  alunos: Aluno[];
   reviews: Review[];
 }
 
