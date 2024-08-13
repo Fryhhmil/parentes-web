@@ -1,0 +1,30 @@
+<table class="table" ><!--*ngIf="parente"-->
+  <form>
+    <input type="text" placeholder="Nome" class="form-control" name="nome" [(ngModel)]="nome" (ngModelChange)="selecionar()">
+
+    <!--
+    <input type="button" value="Cadastrar" class="btn btn-primary cadstro" *ngIf="btnCadastro" (click)="cadastrar()">
+    <input type="button" value="Alterar" class="btn btn-warning" *ngIf="!btnCadastro" (click)="atualizar()">
+    <input type="button" value="Remover" class="btn btn-danger" *ngIf="!btnCadastro" (click)="deletar()">
+    <input type="button" value="Cancelar" class="btn btn-secondary" *ngIf="!btnCadastro" (click)="cancelar()">
+    -->
+  </form>
+
+  <thead>
+<tr>
+  <th>#</th>
+  <th>Nome</th>
+  <th>Parentesco</th>
+  <th>Inspecionar</th>
+</tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of parentes; index as indice">
+      <td>{{indice+1}}</td>
+      <!--<td>{{c.id}}</td>-->
+      <td>{{c.nome}}</td>
+      <td>{{c.tipo}}</td>
+      <td><button class="btn btn-success" (click)="selecionarCliente(indice)">Pressione</button></td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,21 @@
+
+<table class="table" ><!--*ngIf="parente"-->
+
+  <thead>
+<tr>
+  <th>#</th>
+  <th>Nome</th>
+  <th>Alunos Relacionados</th>
+  <th>Telefones do Responsavel</th>
+</tr>
+
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of parente.telefones; index as indice">
+      <td>{{indice+1}}</td>
+      <td>{{parente.nome}}</td>
+      <td>{{c}}</td>
+    </tr>
+  </tbody>
+</table>
+
